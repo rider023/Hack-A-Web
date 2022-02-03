@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Nav, Navbar, Col, Row, Card, Carousel,Container } from "react-bootstrap";
+
+import { Button, Col, Row, Card, Carousel, Container } from "react-bootstrap";
 import logo from "../images/logo.png";
 import pic from "../images/doctor.png";
 import Doctor1 from "../images/doctor pic1.jpg";
@@ -8,9 +9,10 @@ import { Link } from "react-router-dom";
 
 function Discover() {
   const navStyle = {
-    paddingRight: "2em",
-    fontSize: "1.2rem",
+    fontSize: "120%",
     color: "#fff",
+    paddingTop: "2%",
+    paddingLeft: "4%",
   };
   const cardStyle = {
     color: "#fff",
@@ -35,70 +37,86 @@ function Discover() {
   return (
     <div>
       {/* Navbar Section */}
-
-      <Navbar bg="#1A374D" variant="dark" style={{ marginTop: "0.6rem" }}>
-        <Navbar.Brand style={{ marginLeft: "5%" }}>
-          <img
-            src={logo}
-            style={{ marginTop: "-0.4rem", width: "5rem", height: "5rem" }}
-            alt="logo"
-          />
-          <h2
+      <Container>
+        <Row style={{ marginLeft: "-6.5%", marginTop: "1%" ,marginBottom:"4%"}}>
+          <Col style={{ display: "flex", justifyContent: "left" }}>
+            <img
+              src={logo}
+              style={{ width: "5rem", height: "5rem" }}
+              alt="logo"
+            />
+            <Link to="/">
+              <h2
+                style={{
+                  textDecoration: "none",
+                  color: "#B1D0E0",
+                  display: "inline-block",
+                  fontFamily: "sans-serif ",
+                  paddingTop: "12%",
+                }}
+              >
+                OnlineClinic
+              </h2>
+            </Link>
+          </Col>
+          <Col
             style={{
-              textDecoration: "none",
-              color: "#B1D0E0",
-              display: "inline-block",
-              fontFamily: "sans-serif ",
+              paddingTop: "1.4%",
+              display: "flex",
+              marginLeft: "25%",
             }}
           >
-            OnlineClinic
-          </h2>
-        </Navbar.Brand>
-
-        <Nav className="ms-auto " style={{ paddingRight: "8rem" }}>
-          <Nav.Link style={navStyle} href="">
-            About
-          </Nav.Link>
-          <Nav.Link style={navStyle} href="">
-            Services
-          </Nav.Link>
-          <Nav.Link style={navStyle} href="">
-            Pricing
-          </Nav.Link>
-          <Nav.Link style={navStyle} href="">
-            Contact Us
-          </Nav.Link>
-          <Link to="/SignIn" style={{ textDecoration: "none" }}>
-            <h6
-              style={{
-                paddingRight: "2em",
-                paddingLeft: "10em",
-                paddingTop: "0.5rem",
-                fontWeight: "700",
-                letterSpacing: "2px",
-                color: "#fff",
-                backgroundColor: "#1A374D",
-                border: "none",
-                fontSize: "1.03rem",
-              }}
+            <div style={navStyle} href="">
+              About
+            </div>
+            <div style={navStyle} href="">
+              Services
+            </div>
+            <div style={navStyle} href="">
+              Pricing
+            </div>
+            <div style={navStyle} href="">
+              Contact Us
+            </div>
+          </Col>
+          <Col
+            style={{
+              paddingTop: "2.2%",
+              display: "flex",
+              justifyContent: "right",
+            }}
+          >
+            <Link
+              to="/SignIn"
+              style={{ textDecoration: "none", paddingRight: "10%" }}
             >
-              SignIn
-            </h6>
-          </Link>
-          <Link to="/SignUp">
-            <Button
-              style={{
-                borderRadius: "2.5em",
-                backgroundColor: "#6998AB",
-                fontWeight: "700",
-                letterSpacing: "2px",
-              }}
-            >
-              Sign Up
-            </Button>
-          </Link>
-        </Nav>
-      </Navbar>
+              <h6
+                style={{
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  color: "#fff",
+                  fontSize: "1.03rem",
+                }}
+              >
+                SignIn
+              </h6>
+            </Link>
+            <Link to="/SignUp">
+              <Button
+                style={{
+                  marginTop: "-10%",
+                  borderRadius: "20%",
+                  backgroundColor: "#6998AB",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                }}
+              >
+                Sign Up
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Header Section */}
 
@@ -107,9 +125,9 @@ function Discover() {
           <div
             style={{
               color: "#fff",
-              fontSize: "4.2rem",
+              fontSize: "360%",
               marginLeft: "10%",
-              marginTop: "1rem",
+              marginTop: "1%",
               fontWeight: "600",
               lineHeight: "5rem",
             }}
@@ -128,15 +146,15 @@ function Discover() {
             world.
           </div>
         </Col>
-        <Col>
+        <Col lg-1 md-2>
           <img
             src={pic}
             style={{
-              width: "100%",
-              maxWidth: "450px",
+              width: "60%",
+
               height: "auto",
               marginLeft: "20%",
-              borderRadius: "50%",
+              borderRadius: "100%",
             }}
             alt="pic"
           />
@@ -148,7 +166,7 @@ function Discover() {
       <h2
         style={{
           color: "#fff",
-          fontSize: "2.4xrem",
+          fontSize: "2.4rem",
           marginLeft: "5%",
           fontWeight: "600",
           lineHeight: "5rem",
@@ -158,7 +176,7 @@ function Discover() {
       </h2>
       <Card
         style={{
-          width: "20rem",
+          width: "25%",
           border: "none",
           marginLeft: "4%",
           backgroundColor: "#1A374D",
@@ -176,7 +194,7 @@ function Discover() {
       </Card>
       <Card
         style={{
-          width: "20rem",
+          width: "25%",
           border: "none",
           marginLeft: "4%",
           backgroundColor: "#1A374D",
@@ -194,7 +212,7 @@ function Discover() {
       </Card>
       <Card
         style={{
-          width: "20rem",
+          width: "25%",
           border: "none",
           marginLeft: "4%",
           backgroundColor: "#1A374D",
@@ -203,24 +221,6 @@ function Discover() {
       >
         <Card.Img variant="top" src={Doctor1} style={{ borderRadius: "10%" }} />
         <Card.Body>
-          <Card.Title style={cardStyle}>Dr. Laurie Glimcher</Card.Title>
-          <Card.Text style={cardStyle}>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card
-        style={{
-          width: "20rem",
-          border: "none",
-          marginLeft: "4%",
-          backgroundColor: "#1A374D",
-          display: "inline-block",
-        }}
-      >
-        <Card.Img variant="top" src={Doctor1} style={{ borderRadius: "10%" }} />
-        <Card.Body style={{ paddingBottom: "4rem" }}>
           <Card.Title style={cardStyle}>Dr. Laurie Glimcher</Card.Title>
           <Card.Text style={cardStyle}>
             Some quick example text to build on the card title and make up the
@@ -229,22 +229,22 @@ function Discover() {
         </Card.Body>
       </Card>
 
-      <h1 style={{ textAlign: "center", paddingBottom: "3rem", color: "#fff" }}>
+      <h1 style={{ textAlign: "center", paddingBottom: "3%", color: "#fff" }}>
         What Other User’s Say <br />
         About Us
       </h1>
       <Carousel
         style={{
           textAlign: "center",
-          paddingRight: "18rem",
-          paddingLeft: "18rem",
+          paddingRight: "19%",
+          paddingLeft: "19%",
           color: "#fff ",
         }}
       >
         <Carousel.Item interval={1000}>
           <img
             src={Paitent1}
-            style={{ width: "6rem", height: "6rem", borderRadius: "100%" }}
+            style={{ width: "8%", height: "8% ", borderRadius: "100%" }}
             alt="First slide"
           />
 
@@ -259,7 +259,7 @@ function Discover() {
         <Carousel.Item interval={500}>
           <img
             src={Paitent1}
-            style={{ width: "6rem", height: "6rem", borderRadius: "100%" }}
+            style={{ width: "8%", height: "8% ", borderRadius: "100%" }}
             alt="Second slide"
           />
 
@@ -274,7 +274,7 @@ function Discover() {
         <Carousel.Item>
           <img
             src={Paitent1}
-            style={{ width: "6rem", height: "6rem", borderRadius: "100%" }}
+            style={{ width: "8%", height: "8% ", borderRadius: "100%" }}
             alt="Third slide"
           />
 
@@ -289,34 +289,34 @@ function Discover() {
       </Carousel>
 
       <Container>
-      <h3
-        style={{
-          textAlign: "center",
-          fontSize: "3rem",
-          paddingTop: "10rem",
-          paddingBottom: "4rem",
-          borderColor: "red",
-          border: "2px",
-          color: "#fff",
-        }}
-      >
-        Prepare Yourself & Get Connected <br />
-        with the World Best Doctor’s
-      </h3>
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: "1.3rem",
-          fontWeight: "200",
-          paddingBottom: "6rem",
-          borderColor: "red",
-          border: "2px",
-          color: "#fff",
-        }}
-      >
-        {" "}
-        We have some more special offer for you.
-      </p>
+        <h3
+          style={{
+            textAlign: "center",
+            fontSize: "3rem",
+            paddingTop: "10rem",
+            paddingBottom: "4rem",
+            borderColor: "red",
+            border: "2px",
+            color: "#fff",
+          }}
+        >
+          Prepare Yourself & Get Connected <br />
+          with the World Best Doctor’s
+        </h3>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "1.3rem",
+            fontWeight: "200",
+            paddingBottom: "6rem",
+            borderColor: "red",
+            border: "2px",
+            color: "#fff",
+          }}
+        >
+          {" "}
+          We have some more special offer for you.
+        </p>
       </Container>
 
       {/* Footer Section */}
