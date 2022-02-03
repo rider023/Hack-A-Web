@@ -38,7 +38,9 @@ function Discover() {
     <div>
       {/* Navbar Section */}
       <Container>
-        <Row style={{ marginLeft: "-6.5%", marginTop: "1%" ,marginBottom:"4%"}}>
+        <Row
+          style={{ marginLeft: "-6.5%", marginTop: "1%", marginBottom: "4%" }}
+        >
           <Col style={{ display: "flex", justifyContent: "left" }}>
             <img
               src={logo}
@@ -229,7 +231,14 @@ function Discover() {
         </Card.Body>
       </Card>
 
-      <h1 style={{ textAlign: "center", paddingBottom: "3%", color: "#fff" }}>
+      <h1
+        style={{
+          textAlign: "center",
+          marginTop: "5%",
+          paddingBottom: "3%",
+          color: "#fff",
+        }}
+      >
         What Other User’s Say <br />
         About Us
       </h1>
