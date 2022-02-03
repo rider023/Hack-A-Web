@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from "../images/logo.png";
-import {Button, Col, Container, Form, Nav,Row} from 'react-bootstrap';
+import {Button, Col, Container,Row} from 'react-bootstrap';
 import Image from './Image';
 import { Link } from 'react-router-dom';
 import { faGoogle, faApple, faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -35,9 +35,9 @@ function SignIn() {
       <input type="radio" style={{width:"8%",height:"1.5rem"}}/> 
       <label style={{color:"#B1D0E0",fontSize:"140%"}}>Remember Me</label>
       <label style={{color:"#B1D0E0",fontSize:"140%",marginLeft:"22%"}}>Forgot Password?</label>
-      <Button  style={{marginTop:"6%",display:"block",marginBottom:"2%",padding:"1% 34% ",borderRadius:"22px", border:"none",backgroundColor:"#406882",color:"white",textDecoration:"none"}}>
+      <Link to="/Dashboard" style = {{textDecoration:"none"}}><Button  style={{marginTop:"6%",display:"block",marginBottom:"2%",padding:"1% 34% ",borderRadius:"22px", border:"none",backgroundColor:"#406882",color:"white",textDecoration:"none"}}>
      <b style ={{backgroundColor:"#406882",fontSize:"150%"}}>Sign In</b>
-    </Button>
+    </Button></Link>
       </form>
       <h4 style ={{marginBottom:"3%",marginLeft:"28%",color:"white"}}>or continue with</h4>
       <FontAwesomeIcon icon={faGoogle} style ={{margin:"2% 10%",color:"white",width:"8%",height:"6%"}}/>

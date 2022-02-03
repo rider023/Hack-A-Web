@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from "./components/Signup";
 import SignIn from "./components/SignIn";
 import Discover from "./components/Discover";
+import Dashboard from "./components/Dashboard";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route path= "/Discover" exact element = {<Discover/>}/>
         <Route path= "/Signup" exact element = {<Signup/>}/>
         <Route path ="/SignIn" exact element = {<SignIn/>}/>
-
+        <Route path ="/Dashboard" exact element = {<Dashboard/>}/>
       </Routes>
       </BrowserRouter>
     </div>

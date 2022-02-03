@@ -85,8 +85,8 @@ function LandingPage() {
           </Link>
         </Col>
       </Row>
-    </div>
-  );
+  
+    </div>);
 }
 
 export default LandingPage;
