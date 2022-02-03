@@ -6,7 +6,6 @@ import SignIn from "./components/SignIn";
 import Discover from "./components/Discover";
 import Dashboard from "./components/Dashboard";
 
-
 function App() {
   return (
     <div>
