@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Nav, Navbar, Col, Row, Card, Carousel } from "react-bootstrap";
+import { Button, Nav, Navbar, Col, Row, Card, Carousel,Container } from "react-bootstrap";
 import logo from "../images/logo.png";
 import pic from "../images/doctor.png";
 import Doctor1 from "../images/doctor pic1.jpg";
@@ -287,6 +287,8 @@ function Discover() {
           <p style={pStyle}>James Pattinson, Heart Paitent</p>
         </Carousel.Item>
       </Carousel>
+
+      <Container>
       <h3
         style={{
           textAlign: "center",
@@ -315,6 +317,7 @@ function Discover() {
         {" "}
         We have some more special offer for you.
       </p>
+      </Container>
 
       {/* Footer Section */}
 
