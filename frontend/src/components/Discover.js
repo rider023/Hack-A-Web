@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import { Button, Col, Row, Card, Carousel, Container } from "react-bootstrap";
 import logo from "../images/logo.png";
@@ -95,55 +95,103 @@ function Discover() {
               to="/SignIn"
               style={{ textDecoration: "none", paddingRight: "10%" }}
             > */}
-              <h6
-                style={{
-                  fontWeight: "700",
-                  letterSpacing: "2px",
-                  color: "#fff",
-                  fontSize: "120%",
-                  paddingRight: "16%",
-                  cursor:"pointer"
-                }} onClick= { (e) => setIsActive(!isActive)}>
-                SignIn
-              </h6>
-              { isActive && (
-             <div className="dropDown" style={{color:"#fff",fontWeight:"200",fontSize:"100%"}}>
-                 <Link to="/Signup" style={{ textDecoration: "none" }}> 
-              <h3 style={{color:"#fff",fontWeight:"600",fontSize:"100%",position:"absolute",top:"10%",right:"16.6%"}}>As Doctor</h3>
-              </Link>
-              <Link to="/Signup" style={{ textDecoration: "none" }}> 
-              <h3 style={{color:"#fff",fontWeight:"600",fontSize:"100%",position:"absolute",top:"14%",right:"16.6%"}}>As Paitent</h3>
-              </Link>
+            <h6
+              style={{
+                fontWeight: "700",
+                letterSpacing: "2px",
+                color: "#fff",
+                fontSize: "120%",
+                paddingRight: "16%",
+                cursor: "pointer",
+              }}
+              onClick={(e) => setIsActive(!isActive)}
+            >
+              SignIn
+            </h6>
+            {isActive && (
+              <div
+                className="dropDown"
+                style={{ color: "#fff", fontWeight: "200", fontSize: "100%" }}
+              >
+                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                  <h3
+                    style={{
+                      color: "#fff",
+                      fontWeight: "600",
+                      fontSize: "100%",
+                      position: "absolute",
+                      top: "10%",
+                      right: "16.6%",
+                    }}
+                  >
+                    As Doctor
+                  </h3>
+                </Link>
+                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                  <h3
+                    style={{
+                      color: "#fff",
+                      fontWeight: "600",
+                      fontSize: "100%",
+                      position: "absolute",
+                      top: "14%",
+                      right: "16.6%",
+                    }}
+                  >
+                    As Paitent
+                  </h3>
+                </Link>
               </div>
-              )}
- 
-          
-              <h6
-                style={{
-                  
-                  borderRadius: "20%",
-                  fontSize: "120%",
-                  fontWeight: "700",
-                  letterSpacing: "2px",
-                  cursor:"pointer",
-                  color:"#fff"
-                }}
-                onClick= { (e) => setActive(!Active)} >
-                Sign Up
-                
-              </h6>
-              { Active && (
-             <div className="dropDown" style={{color:"#fff",fontWeight:"200",fontSize:"100%"}}>
-                 <Link to="/Signup" style={{ textDecoration: "none" }}> 
-              <h3 style={{color:"#fff",fontWeight:"600",fontSize:"100%",position:"absolute",top:"10%",right:"9%"}}>As Doctor</h3>
-              </Link>
-              <Link to="/Signup" style={{ textDecoration: "none" }}> 
-              <h3 style={{color:"#fff",fontWeight:"600",fontSize:"100%",position:"absolute",top:"14%",right:"9%"}}>As Paitent</h3>
-              </Link>
+            )}
+
+            <h6
+              style={{
+                borderRadius: "20%",
+                fontSize: "120%",
+                fontWeight: "700",
+                letterSpacing: "2px",
+                cursor: "pointer",
+                color: "#fff",
+              }}
+              onClick={(e) => setActive(!Active)}
+            >
+              Sign Up
+            </h6>
+            {Active && (
+              <div
+                className="dropDown"
+                style={{ color: "#fff", fontWeight: "200", fontSize: "100%" }}
+              >
+                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                  <h3
+                    style={{
+                      color: "#fff",
+                      fontWeight: "600",
+                      fontSize: "100%",
+                      position: "absolute",
+                      top: "10%",
+                      right: "9%",
+                    }}
+                  >
+                    As Doctor
+                  </h3>
+                </Link>
+                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                  <h3
+                    style={{
+                      color: "#fff",
+                      fontWeight: "600",
+                      fontSize: "100%",
+                      position: "absolute",
+                      top: "14%",
+                      right: "9%",
+                    }}
+                  >
+                    As Paitent
+                  </h3>
+                </Link>
               </div>
-             
-              )}
-            
+            )}
           </Col>
         </Row>
       </Container>
@@ -377,10 +425,14 @@ function Discover() {
           </p>
         </Col>
         <Col>
-          <h6 id="about" style={{ color: "#fff" }}>About</h6>
+          <h6 id="about" style={{ color: "#fff" }}>
+            About
+          </h6>
         </Col>
         <Col>
-          <h6 id="contact" style={{ color: "#fff" }}>Get in Touch</h6>
+          <h6 id="contact" style={{ color: "#fff" }}>
+            Get in Touch
+          </h6>
         </Col>
       </Row>
     </div>
