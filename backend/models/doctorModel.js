@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt'
 
 const doctorSchema = mongoose.Schema({
-  name: {
+  full_name: {
     type: String,
     required: true,
   },
@@ -16,6 +17,13 @@ const doctorSchema = mongoose.Schema({
   specialization: {
     type: String,
     required: true,
+  },
+  gender: {
+    type: String,
+    enum: ['male', 'female', 'other'],
+  },
+  age: {
+    type: Number,
   },
   hash_password: {
     type: String,
@@ -51,4 +59,17 @@ const doctorSchema = mongoose.Schema({
   ],
 });
 
-export default Doctor = mongoose.model('doctor', doctorSchema);
+
+doctorSchema.virtual('password').set(function (password) {
+  this.hash_password = bcrypt.hashSync(password, 10);
+});
+
+doctorSchema.methods = {
+  authenticate: function (password) {
+    return bcrypt.compareSync(password, this.hash_password);
+  },
+};
+
+const Doctor = mongoose.model('Doctor', doctorSchema);
+
+export default Doctor ;
