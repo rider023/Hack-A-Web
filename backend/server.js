@@ -4,6 +4,8 @@ import { connectdb } from './db/connectDb.js';
 import { userSignin, userSignup } from './controllers/userAuth.js';
 import { doctorSignin, doctorSignup } from './controllers/doctorAuth.js';
 import { getDoctors } from './controllers/getDoctors.js';
+import { authenticateToken } from './controllers/authenticateToken.js';
+import { getDoctor, getUser } from './controllers/getById.js';
 
 const app = express();
 
@@ -20,8 +22,8 @@ app.post('/doctor/signup', doctorSignup);
 app.post('/doctor/signin', doctorSignin);
 
 app.get('/doctors', getDoctors);
-app.get('/doctor/:id') ; 
-app.get('/user/:id') ;
+app.get('/doctor',authenticateToken,getDoctor) ; 
+app.get('/user',authenticateToken,getUser) ;
 
 //* Listners
 const port = process.env.PORT || 5001;
