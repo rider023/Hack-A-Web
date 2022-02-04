@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../images/logo.png";
-import {Button, Col, Container, Nav,Row} from 'react-bootstrap';
+import {Button, Col, Container, Nav,Row,Form} from 'react-bootstrap';
 import Image from './Image';
 import { Link } from 'react-router-dom';
 import { faBell,faCalendar,faHouseUser,faRobot,faRupeeSign,faUserNurse,faUser } from "@fortawesome/free-solid-svg-icons";
@@ -44,14 +44,58 @@ function Dashboard() {
         
         <Col>
         <Container style={{justifyContent:"center"}}>
-        <h2 style={{marginBottom:"3%",color:"#B1D0E0",marginLeft:"8%"}}><b>Profile</b></h2>
-        <div style = {{marginBottom:"3%",display:"flex",justifyContent:"center"}}>
+        <h2 style={{marginBottom:"1%",color:"#B1D0E0",marginLeft:"8%"}}><b>Profile</b></h2>
+        <div style = {{marginBottom:"8%",display:"flex",justifyContent:"center"}}>
       <img src={logo} style = {{width:'130px',height:'120px'}}/>
         </div>
-        <form>
-          <label style={{marginBottom:"3%",color:"#B1D0E0",marginRight:"1%"}}>First Name: </label>
-          <input style={{marginBottom:"3%",backgroundColor:"white",marginRight:"5%",width:"30%",borderRadius:"20px"}}/>
-          <label style={{marginBottom:"3%",color:"#B1D0E0",marginRight:"1%"}}>Last Name: </label>
+
+        <Form>
+        <Form.Group className="mb-5"  style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>First Name: </Form.Label>
+        <Form.Control type="text" placeholder="Enter First Name" style={{marginRight:"5%",borderRadius:"8px",width:"30%"}}/>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Last Name: </Form.Label>
+        <Form.Control type="text" placeholder="Enter Last Name" style={{marginRight:"5%",borderRadius:"8px",width:"30%"}}/>
+         </Form.Group>
+         <Form.Group className="mb-5" style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Email: </Form.Label>
+        <Form.Control type="email" placeholder="Enter Email" style={{borderRadius:"8px",width:"720px",marginRight:"5%"}}/>
+         </Form.Group>
+         <Form.Group className="mb-5" style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Contact Number: </Form.Label>
+        <Form.Control type="number" placeholder="Enter Contact number" style={{borderRadius:"8px",width:"650px",marginRight:"5%"}}/>
+         </Form.Group>
+         <Form.Group className="mb-5"  style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{marginLeft:"5%",color:"#B1D0E0",marginRight:"1%"}}>Age: </Form.Label>
+        <Form.Control type="number" placeholder="Enter Age" style={{marginRight:"2%",borderRadius:"8px",width:"30%"}}/>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Gender: </Form.Label>
+        <Form.Control type="text" placeholder="Enter Gender" style={{marginRight:"2%",borderRadius:"8px",width:"30%"}}/>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Weight: </Form.Label>
+        <Form.Control type="number" placeholder="Enter Weight" style={{marginRight:"10%",borderRadius:"8px",width:"30%"}}/>
+         </Form.Group>
+         <Form.Group className="mb-5"  style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>City: </Form.Label>
+        <Form.Control type="text" placeholder="Enter City" style={{marginRight:"5%",borderRadius:"8px",width:"35%"}}/>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>State: </Form.Label>
+        <Form.Control type="text" placeholder="Enter State" style={{marginRight:"5%",borderRadius:"8px",width:"35%"}}/>
+         </Form.Group>
+         <Form.Group className="mb-5"  style={{display:"flex", justifyContent:"center"}}>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Zip Code: </Form.Label>
+        <Form.Control type="number" placeholder="Enter Zip Code" style={{marginRight:"5%",borderRadius:"8px",width:"32%"}}/>
+        <Form.Label  style={{color:"#B1D0E0",marginRight:"1%"}}>Country: </Form.Label>
+        <Form.Control type="text" placeholder="Enter Country" style={{marginRight:"5%",borderRadius:"8px",width:"32%"}}/>
+         </Form.Group>
+          <Button style={{marginLeft:"40%",backgroundColor:"#6998AB",padding:"1% 6%",borderRadius:"19px",borderColor:"transparent"}}>Save</Button>
+          
+          </Form>
+          </Container>
+        </Col>
+      </Row>
+    </Container>
+  </div>;
+}
+
+export default Dashboard;
+{/* <label style={{marginBottom:"3%",color:"#B1D0E0",marginRight:"1%"}}>Last Name: </label>
           <input style={{marginBottom:"3%",backgroundColor:"white",marginRight:"15%",width:"30%",borderRadius:"20px"}}/>
           <label style={{marginBottom:"3%",color:"#B1D0E0",marginRight:"1%"}}>Email: </label>
           <input style={{marginBottom:"3%",backgroundColor:"white",marginRight:"8%",width:"79%",borderRadius:"20px"}}/>
@@ -67,14 +111,4 @@ function Dashboard() {
           <input style={{marginBottom:"3%",backgroundColor:"white",marginRight:"5%",width:"30%",borderRadius:"20px"}}/>
           <label style={{marginBottom:"3%",color:"#B1D0E0",marginRight:"1%"}}>Zip Code: </label>
           <input style={{marginBottom:"3%",backgroundColor:"white",marginRight:"15%",width:"30%",borderRadius:"20px"}}/>
-          
-          <Button style={{marginLeft:"40%",backgroundColor:"#6998AB",padding:"1% 6%",borderRadius:"19px",borderColor:"transparent"}}>Save</Button>
-          </form>
-          </Container>
-        </Col>
-      </Row>
-    </Container>
-  </div>;
-}
-
-export default Dashboard;
+           */}
