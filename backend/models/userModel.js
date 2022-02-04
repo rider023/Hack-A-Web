@@ -1,4 +1,4 @@
-import mongoose, { trusted } from 'mongoose' ; 
+import mongoose from 'mongoose' ; 
 
 const userSchema = new mongoose.Schema({
     email:{
@@ -13,4 +13,16 @@ const userSchema = new mongoose.Schema({
     full_name:{
         type:String
     },
+    gender: {
+        type: String,
+        enum: ["male", "female","other"],
+    },
+    age:{
+        type:Number,
+    },
+    contact:{
+        type:String, 
+    }
 })
+
+export default User = mongoose.model("user",userSchema) ; 
