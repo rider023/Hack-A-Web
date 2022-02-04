@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from "../images/logo.png";
 import {Button, Col, Container, Nav,Row,Form} from 'react-bootstrap';
 import Image from './Image';
 import { Link } from 'react-router-dom';
 import { faBell,faCalendar,faHouseUser,faRobot,faRupeeSign,faUserNurse,faUser,faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Profile from './Profile';
 
-function Dashboard() {
-  const [route,setRoute] = useState(0); 
+function Payments() {
   return <div>
   <Container style={{marginBottom:"3%"}}>
   <Row style = {{marginTop:"1%"}}>
@@ -32,11 +30,11 @@ function Dashboard() {
 </div>
     <div style={{listStyle:"none",borderStyle:'solid',borderRadius:"50px",paddingBottom:"20%",paddingTop:"12%"}}>
       <ul style={{listStyle:"none"}}>
-     <Link to='/Dashboard' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none",textShadow:"2px 2px 4px aliceblue"}}><FontAwesomeIcon  icon={faHouseUser} size='x'style={{color:"snow"}}/> Dashboard</li></Link>
+     <Link to='/Dashboard' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faHouseUser} size='x'style={{color:"snow"}}/> Dashboard</li></Link>
      <Link to='/ConsultDoctor' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faUserNurse} size='x'style={{color:"snow"}}/> Consult Doctors</li></Link>
      <Link to='/Appointments' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faCalendar} size='x'style={{color:"snow"}}/> Appointments</li></Link>
      <Link to='/DoctorAI' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRobot} size='x'style={{color:"snow"}}/> DoctorAI</li></Link>
-     <Link to='/Payments' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRupeeSign} size='x'style={{color:"snow"}}/> Payments</li></Link>
+     <Link to='/Payments' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none",textShadow:"2px 2px 4px aliceblue"}}><FontAwesomeIcon  icon={faRupeeSign} size='x'style={{color:"snow"}}/> Payments</li></Link>
      <Link to='/Profile' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faUser} size='x'style={{color:"snow"}}/> Registration Info</li></Link>
       </ul>
       </div>
@@ -44,7 +42,8 @@ function Dashboard() {
     
     <Col>
     <Container style={{justifyContent:"center"}}>
-    <h2 style={{marginBottom:"1%",color:"#B1D0E0",marginLeft:"8%"}}><b>DASHBOARD</b></h2>
+    <h2 style={{marginBottom:"1%",color:"#B1D0E0",marginLeft:"8%"}}><b>PAYMENTS</b></h2>
+    
       </Container>
     </Col>
   </Row>
@@ -52,4 +51,4 @@ function Dashboard() {
 </div>;
 }
 
-export default Dashboard;
+export default Payments;
