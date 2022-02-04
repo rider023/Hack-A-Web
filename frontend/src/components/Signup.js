@@ -24,10 +24,10 @@ function Signup() {
 
 
   <Row style ={{display:"flex",paddingBottom:"5%",marginRight:"1%"}}>
-    <Col style ={{display:"flex",justifyContent:"center",margin:"8% 0%"}}>
+    <Col style ={{display:"flex",justifyContent:"center",margin:"8% 0%",minWidth:"300px"}}>
     <Image/>
     </Col>
-    <Col style ={{display:"block",justifyContent:"center"}}>
+    <Col style ={{display:"block",justifyContent:"center",marginLeft:"3%"}}>
     <div style ={{color:"#B1D0E0",fontSize:"300%"}}>Welcome to OnlineClinic</div>
     <div style ={{color:"#B1D0E0",fontSize:"140%",marginBottom:"3%"}}>Already have an account?<Link to="/SignIn" style = {{textDecoration:"none",color:"#FFF89A"}}> Sign In.</Link></div>
     <form style ={{justifyContent:"center"}}>

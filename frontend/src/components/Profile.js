@@ -17,7 +17,6 @@ function Profile() {
   <div style = {{paddingTop:"3.7%",textDecoration:"none"}}><Link to='/' style = {{textDecoration:"none",color:"#B1D0E0"}}><h2 style = {{fontFamily:"sans-serif "}}>OnlineClinic</h2></Link></div>
     </Col>
     <Col style = {{paddingTop:"2%",display:"flex",justifyContent:"right"}}>
-    <div style = {{textDecoration:"none",color:"white",marginRight:"2%"}}><h4 style = {{fontFamily:"sans-serif "}}>Discover</h4></div>
     <FontAwesomeIcon icon={faMailBulk} size='2x'style={{color:"snow",marginRight:"2%"}}/>
     <FontAwesomeIcon icon={faBell} size='2x'style={{color:"snow"}}/>
     </Col>
@@ -29,14 +28,14 @@ function Profile() {
     <div style = {{marginBottom:"8%"}}>
   <img src={logo} style = {{width:'70px',height:'60px'}}/>
 </div>
-    <div style={{listStyle:"none",borderStyle:'solid',borderRadius:"50px",paddingBottom:"20%",paddingTop:"12%"}}>
-      <ul style={{listStyle:"none"}}>
-     <Link to='/Dashboard' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faHouseUser} size='x'style={{color:"snow"}}/> Dashboard</li></Link>
-     <Link to='/ConsultDoctor' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none",textShadow:"2px 2px 4px aliceblue"}}><FontAwesomeIcon  icon={faUserNurse} size='x'style={{color:"snow"}}/> Consult Doctors</li></Link>
-     <Link to='/Appointments' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faCalendar} size='x'style={{color:"snow"}}/> Appointments</li></Link>
-     <Link to='/DoctorAI' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRobot} size='x'style={{color:"snow"}}/> DoctorAI</li></Link>
-     <Link to='/Payments' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRupeeSign} size='x'style={{color:"snow"}}/> Payments</li></Link>
-     <Link to='/Profile' style={{textDecoration:"none"}}> <li style={{color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faUser} size='x'style={{color:"snow"}}/> Registration Info</li></Link>
+<div style={{backgroundColor:"#285373",listStyle:"none",borderStyle:'solid',borderRadius:"50px",paddingBottom:"20%",paddingTop:"12%"}}>
+      <ul style={{backgroundColor:"#285373",listStyle:"none"}}>
+     <Link to='/Dashboard' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faHouseUser} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> Dashboard</li></Link>
+     <Link to='/ConsultDoctor' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faUserNurse} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> Consult Doctors</li></Link>
+     <Link to='/Appointments' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faCalendar} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> Appointments</li></Link>
+     <Link to='/DoctorAI' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRobot} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> DoctorAI</li></Link>
+     <Link to='/Payments' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none"}}><FontAwesomeIcon  icon={faRupeeSign} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> Payments</li></Link>
+     <Link to='/Profile' style={{textDecoration:"none"}}> <li style={{backgroundColor:"#285373",color:"white",fontSize:"160%",marginBottom:"5%",textDecoration:"none",textShadow:"2px 2px 4px aliceblue"}}><FontAwesomeIcon  icon={faUser} size='x'style={{backgroundColor:"#285373",color:"snow"}}/> Registration Info</li></Link>
       </ul>
       </div>
     </Col>

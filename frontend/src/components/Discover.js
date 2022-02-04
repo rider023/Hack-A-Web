@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button, Col, Row, Card, Carousel, Container } from "react-bootstrap";
 import logo from "../images/logo.png";
 import pic from "../images/doctor.png";
-import Doctor1 from "../images/doctor pic1.jpg";
+import Doctor1 from "../images/doctorpic1.jpg";
 import Paitent1 from "../images/person1.jpg";
 import { Link } from "react-router-dom";
 
@@ -113,7 +113,7 @@ function Discover() {
                 className="dropDown"
                 style={{ color: "#fff", fontWeight: "200", fontSize: "100%" }}
               >
-                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                <Link to="/SignIn" style={{ textDecoration: "none" }}>
                   <h3
                     style={{
                       color: "#fff",
@@ -127,7 +127,7 @@ function Discover() {
                     As Doctor
                   </h3>
                 </Link>
-                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                <Link to="/SignIn" style={{ textDecoration: "none" }}>
                   <h3
                     style={{
                       color: "#fff",

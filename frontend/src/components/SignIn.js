@@ -23,8 +23,8 @@ function SignIn() {
   
   
   
-    <Row style ={{display:"flex",paddingBottom:"5%",marginRight:"1%"}}>
-      <Col style ={{marginTop:"2%",marginLeft:"10%",display:"block",justifyContent:"right"}}>
+    <Row style ={{display:"flex",paddingBottom:"5%",marginRight:"1%",marginLeft:"3%"}}>
+      <Col style ={{marginTop:"2%",marginLeft:"3%",display:"block",minWidth:"500px"}}>
       <div style ={{color:"#B1D0E0",fontSize:"300%"}}>Welcome Back!</div>
       <div style ={{color:"#B1D0E0",fontSize:"140%",marginBottom:"3%"}}>Don't have an account?<Link to="/SignUp" style = {{textDecoration:"none",color:"#FFF89A"}}> Sign Up.</Link></div>
       <form style ={{justifyContent:"center"}}>
@@ -34,7 +34,7 @@ function SignIn() {
       <input type="password" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"4%",height:"50px",borderRadius:"22px"}}/>
       <input type="radio" style={{width:"8%",height:"1.5rem"}}/> 
       <label style={{color:"#B1D0E0",fontSize:"140%"}}>Remember Me</label>
-      <label style={{color:"#B1D0E0",fontSize:"140%",marginLeft:"22%"}}>Forgot Password?</label>
+      <label style={{color:"#B1D0E0",fontSize:"140%",marginLeft:"16%"}}>Forgot Password?</label>
       <Link to="/Dashboard" style = {{textDecoration:"none"}}><Button  style={{marginTop:"6%",display:"block",marginBottom:"2%",padding:"1% 34% ",borderRadius:"22px", border:"none",backgroundColor:"#406882",color:"white",textDecoration:"none"}}>
      <b style ={{backgroundColor:"#406882",fontSize:"150%"}}>Sign In</b>
     </Button></Link>
