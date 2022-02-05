@@ -11,7 +11,7 @@ import Payments from './components/Payments';
 import ConsultDoctor from './components/ConsultDoctor';
 import DoctorAI from './components/DoctorAI';
 import Doctors from './components/Doctors';
-
+import DoctorProfile from './components/DoctorProfile';
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
         <Route path ="/ConsultDoctor" exact element = {<ConsultDoctor/>}/>
         <Route path ="/DoctorAI" exact element = {<DoctorAI/>}/>
         <Route path ="/ConsultDoctor/Doctors" exact element = {<Doctors/>}/>
+        <Route path="/DoctorProfile" exact element = {<DoctorProfile/>}/>
       </Routes>
       </BrowserRouter>
     </div>
