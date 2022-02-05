@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import emailjs from "emailjs-com"
 import { Button, Col, Row, Card, Carousel, Container } from "react-bootstrap";
 import logo from "../images/logo.png";
 import pic from "../images/doctor.png";
@@ -13,6 +13,7 @@ function Discover() {
     color: "#fff",
     paddingTop: "2%",
     paddingLeft: "4%",
+    textDecoration:"none"
   };
   const cardStyle = {
     color: "#fff",
@@ -36,13 +37,16 @@ function Discover() {
   };
   const [isActive, setIsActive] = useState(false);
   const [Active, setActive] = useState(false);
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    emailjs.sendForm('service_ba05nde','template_n358vgs',event.target,'user_XQZLfdP4na11L1AnqPxQG').then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+  }
   return (
     <div>
       {/* Navbar Section */}
       <Container>
         <Row
-          style={{ marginLeft: "-6.5%", marginTop: "1%", marginBottom: "4%" }}
+          style={{ display: "flex", marginTop: "1%", marginBottom: "10%" }}
         >
           <Col style={{ display: "flex", justifyContent: "left" }}>
             <img
@@ -64,50 +68,40 @@ function Discover() {
               </h2>
             </Link>
           </Col>
+
           <Col
             style={{
               paddingTop: "1.4%",
               display: "flex",
-              marginLeft: "25%",
-            }}
-          >
-            <div style={navStyle} href="">
-              About
-            </div>
-            <div style={navStyle} href="">
-              Services
-            </div>
-            <div style={navStyle} href="">
-              Pricing
-            </div>
-            <div style={navStyle} href="">
-              Contact Us
-            </div>
-          </Col>
-          <Col
-            style={{
-              paddingTop: "2.2%",
-              display: "flex",
               justifyContent: "right",
             }}
           >
+            <div style={navStyle} href="">
+             <a href='#about' style={{textDecoration:'none',color:'white'}}> About</a>
+            </div>
+            
+            <div style={navStyle} href="">
+            <a href='#contact' style={{textDecoration:'none',color:'white'}}>Contact Us</a>
+            </div>
+      
             {/* <Link
               to="/SignIn"
               style={{ textDecoration: "none", paddingRight: "10%" }}
             > */}
-            <h6
+            <div
               style={{
                 fontWeight: "700",
                 letterSpacing: "2px",
                 color: "#fff",
                 fontSize: "120%",
-                paddingRight: "16%",
+                paddingTop: "2%",
+                paddingLeft: "4%",
                 cursor: "pointer",
               }}
               onClick={(e) => setIsActive(!isActive)}
             >
               SignIn
-            </h6>
+            </div>
             {isActive && (
               <div
                 className="dropDown"
@@ -144,19 +138,20 @@ function Discover() {
               </div>
             )}
 
-            <h6
+            <div
               style={{
-                borderRadius: "20%",
-                fontSize: "120%",
                 fontWeight: "700",
                 letterSpacing: "2px",
-                cursor: "pointer",
                 color: "#fff",
+                fontSize: "120%",
+                paddingTop: "2%",
+                paddingLeft: "4%",
+                cursor: "pointer",
               }}
               onClick={(e) => setActive(!Active)}
             >
               Sign Up
-            </h6>
+            </div>
             {Active && (
               <div
                 className="dropDown"
@@ -170,7 +165,7 @@ function Discover() {
                       fontSize: "100%",
                       position: "absolute",
                       top: "10%",
-                      right: "9%",
+                      right: "2%",
                     }}
                   >
                     As Doctor
@@ -184,7 +179,7 @@ function Discover() {
                       fontSize: "100%",
                       position: "absolute",
                       top: "14%",
-                      right: "9%",
+                      right: "2%",
                     }}
                   >
                     As Paitent
@@ -198,7 +193,7 @@ function Discover() {
 
       {/* Header Section */}
 
-      <Row>
+      <Row id="about">
         <Col>
           <div
             style={{
@@ -210,7 +205,7 @@ function Discover() {
               lineHeight: "5rem",
             }}
           >
-            10,000+ best doctor’s are available for you, Go Explore{" "}
+            10,000+ best doctors are available for you, Pick Your choice!
           </div>
           <div
             style={{
@@ -220,7 +215,7 @@ function Discover() {
               fontWeight: "300",
             }}
           >
-            We try to provide you best and afordable Doctor’s from all over the
+            We are an online clinic which tries to provide you the best and affordable Doctors from all over the
             world.
           </div>
         </Col>
@@ -315,7 +310,7 @@ function Discover() {
           color: "#fff",
         }}
       >
-        What Other User’s Say <br />
+        What Other Users Say <br />
         About Us
       </h1>
       <Carousel
@@ -402,6 +397,31 @@ function Discover() {
           {" "}
           We have some more special offer for you.
         </p>
+
+        <div id="contact" 
+        style={{
+          borderColor:"#285373",
+          borderStyle:"double",
+          borderWidth:"4px",
+          borderRadius:"20px",
+              color: "#fff",
+              marginLeft: "10%",
+              marginTop: "1%",
+              marginBottom:"8%",
+              padding:"1%"
+            }}>
+        <h1>Mail Us Here</h1>
+        <form onSubmit={handleSubmit}  style={{marginTop:"5%",display:'block',marginLeft : "5px"}}>
+ <label style={{marginRight:"1%",marginBottom:"0.3%"}}>Name</label>
+ <input name = "name" type="text" style = {{minWidth:"380px",width:"40%",marginRight:"5%",backgroundColor:"white",borderRadius:"2px",borderWidth:"1px"}}/>
+ <label style={{marginRight:"1%",marginBottom:"0.3%"}}>Email</label>
+ <input name = "usermail" type="email" style = {{minWidth:"380px",width:"40%",backgroundColor:"white",marginBottom:"1%",borderRadius:"2px",borderWidth:"1px"}}/>
+ <label style={{marginRight:"1%",marginBottom:"0.3%"}}>Message</label>
+ <textarea rows="8" name = "message" maxLength= "1000" placeholder="Type your message here ..." style={{minWidth:"380px",width:"80%",backgroundColor:"white",marginRight:"20%",marginBottom:"1%",borderRadius:"2px",borderWidth:"1px"}}/>
+    <button type = "submit"style={{fontSize:"120%",padding : "1% 5%",backgroundColor:"#B1D0E0"
+   ,borderRadius: "25px",color:"white", marginBottom:"25px"}}>Send</button>
+    </form>
+    </div>
       </Container>
 
       {/* Footer Section */}
