@@ -69,7 +69,7 @@ function LandingPage() {
           marginRight: "1%",
         }}
       >
-        <Col style={{ display: "flex", justifyContent: "center" }}>
+        <Col style={{ display: "flex", justifyContent: "center",minWidth:"300px"}}>
           <Image />
         </Col>
         <Col style={{ display: "block", justifyContent: "left" }}>
