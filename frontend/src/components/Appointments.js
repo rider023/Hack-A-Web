@@ -1,15 +1,13 @@
 import React from 'react';
 import logo from "../images/logo.png";
 import { Button, Col, Container, Row,Table} from 'react-bootstrap';
-
-
-// import Image from './Image';
 import { Link } from 'react-router-dom';
 import { faBell,faCalendar,faHouseUser,faRobot,faRupeeSign,faUserNurse,faUser,faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function Appointments() {
+
   const styles = {
     fontFamily: "sans-serif",
     textAlign: "center",

@@ -10,6 +10,7 @@ import Appointments from './components/Appointments';
 import Payments from './components/Payments';
 import ConsultDoctor from './components/ConsultDoctor';
 import DoctorAI from './components/DoctorAI';
+import Doctors from './components/Doctors';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path ="/Payments" exact element = {<Payments/>}/>
         <Route path ="/ConsultDoctor" exact element = {<ConsultDoctor/>}/>
         <Route path ="/DoctorAI" exact element = {<DoctorAI/>}/>
+        <Route path ="/ConsultDoctor/Doctors" exact element = {<Doctors/>}/>
       </Routes>
       </BrowserRouter>
     </div>

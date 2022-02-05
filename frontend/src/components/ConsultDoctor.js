@@ -16,6 +16,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ConsultDoctor() {
+
   const boxStyle = {
     minWidth: "200px",
     marginBottom: "2%",
@@ -48,6 +49,7 @@ function ConsultDoctor() {
     {minWidth: "200px",display: "flex",width: "45%",height:"auto",borderRadius: "25px",padding: "2%",paddingTop:"2%",marginLeft:"6%",background: "#285373",justifyContent:"center",marginBottom:"2%"}
   
   return (
+   
   <div>
   <Container style={{marginBottom:"3%"}}>
   <Row style = {{marginTop:"1%"}}>
@@ -133,7 +135,9 @@ function ConsultDoctor() {
                   marginLeft: "1%",paddingTop:"6%",marginBottom:"6%"}}>Categories</h3>
                     </Col>
                     <Col style={{textAlign:"right",marginTop:"5%"}}>
+                      <Link to="/ConsultDoctor/Doctors" style={{textDecoration:"none"}}>
                     <h6 style={{color:"#B1D0E0"}} >More</h6>
+                    </Link>
                     </Col>
                   </Row>
                 
@@ -178,7 +182,9 @@ function ConsultDoctor() {
                   marginLeft: "1%",paddingTop:"6%",marginBottom:"5%"}}>Top Rated Doctor's</h3>
                     </Col>
                     <Col style={{textAlign:"right",marginTop:"5%"}}>
+                    <Link to="/ConsultDoctor/Doctors" style={{textDecoration:"none"}}>
                     <h6 style={{color:"#B1D0E0"}} >More</h6>
+                    </Link>
                     </Col>
                   </Row>
                
