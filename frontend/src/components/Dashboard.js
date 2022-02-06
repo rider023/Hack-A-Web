@@ -53,7 +53,7 @@ function Dashboard() {
       <Col style={{backgroundColor:"#B1D0E0",padding:"2%",borderRadius:"20px"}}>
       <h2 style={{backgroundColor:"#B1D0E0",color:"#1A374D"}}>Welcom Back Kanpachiro Ganoboko!</h2>
       <h4 style={{backgroundColor:"#B1D0E0",color:"#1A374D"}}>Check your health with us, We have the best doctors around the world!</h4>
-      <Link to="/ConsultDoctor">
+      <Link to="/ConsultDoctor" style={{backgroundColor:"#6998AB"}}>
       <Button style={{backgroundColor:"#6998AB",borderRadius:"20px",padding:"4%"}}>Consult a Doctor</Button>
       </Link>
       </Col>
