@@ -8,6 +8,7 @@ import { authenticateToken } from './controllers/authenticateToken.js';
 import { getDoctor, getUser } from './controllers/getById.js';
 import { consultdoctor } from './controllers/consultDoctor.js';
 import cors from 'cors'
+import { getConsultants } from './controllers/getConsultants.js';
 
 const app = express();
 
@@ -15,7 +16,6 @@ const app = express();
 app.use(express.json());
 app.use(cors("*"))
 dotenv.config();
-
 connectdb();
 
 //todo Routes
@@ -28,6 +28,7 @@ app.post('/user/consultdoctor',authenticateToken,consultdoctor)
 app.get('/doctors', getDoctors);
 app.get('/doctor', authenticateToken, getDoctor);
 app.get('/user', authenticateToken, getUser);
+app.get("/doctor/consultants",authenticateToken,getConsultants) ; 
 
 //* Listners
 const port = process.env.PORT || 5001;
