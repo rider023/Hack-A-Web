@@ -6,11 +6,14 @@ import { doctorSignin, doctorSignup } from './controllers/doctorAuth.js';
 import { getDoctors } from './controllers/getDoctors.js';
 import { authenticateToken } from './controllers/authenticateToken.js';
 import { getDoctor, getUser } from './controllers/getById.js';
+import { consultdoctor } from './controllers/consultDoctor.js';
+import cors from 'cors'
 
 const app = express();
 
 //todo Middlewares
 app.use(express.json());
+app.use(cors("*"))
 dotenv.config();
 
 connectdb();
@@ -20,10 +23,11 @@ app.post('/user/signup', userSignup);
 app.post('/user/signin', userSignin);
 app.post('/doctor/signup', doctorSignup);
 app.post('/doctor/signin', doctorSignin);
+app.post('/user/consultdoctor',authenticateToken,consultdoctor)
 
 app.get('/doctors', getDoctors);
-app.get('/doctor',authenticateToken,getDoctor) ; 
-app.get('/user',authenticateToken,getUser) ;
+app.get('/doctor', authenticateToken, getDoctor);
+app.get('/user', authenticateToken, getUser);
 
 //* Listners
 const port = process.env.PORT || 5001;

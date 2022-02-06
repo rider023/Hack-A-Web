@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
 
 const doctorSchema = mongoose.Schema({
   full_name: {
@@ -55,10 +55,12 @@ const doctorSchema = mongoose.Schema({
         type: String,
         emum: ['male', 'female', 'other'],
       },
+      requestDate:{
+        type:Date,
+      }
     },
   ],
 });
-
 
 doctorSchema.virtual('password').set(function (password) {
   this.hash_password = bcrypt.hashSync(password, 10);
@@ -72,4 +74,4 @@ doctorSchema.methods = {
 
 const Doctor = mongoose.model('Doctor', doctorSchema);
 
-export default Doctor ;
+export default Doctor;
