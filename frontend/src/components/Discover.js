@@ -107,7 +107,7 @@ function Discover() {
                 className="dropDown"
                 style={{ color: "#fff", fontWeight: "200", fontSize: "100%" }}
               >
-                <Link to="/SignIn" style={{ textDecoration: "none" }}>
+                <Link to="/DoctorSignIn" style={{ textDecoration: "none" }}>
                   <h3
                     style={{
                       color: "#fff",
@@ -157,7 +157,7 @@ function Discover() {
                 className="dropDown"
                 style={{ color: "#fff", fontWeight: "200", fontSize: "100%" }}
               >
-                <Link to="/Signup" style={{ textDecoration: "none" }}>
+                <Link to="/DoctorSignup" style={{ textDecoration: "none" }}>
                   <h3
                     style={{
                       color: "#fff",

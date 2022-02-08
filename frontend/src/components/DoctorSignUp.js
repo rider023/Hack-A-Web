@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from "../images/logo.png";
 import {Button, Col, Container, Form, Nav,Row} from 'react-bootstrap';
-import Image from './Image';
+import pic from '../images/img.png';
 import { Link } from 'react-router-dom';
 import { faGoogle, faApple, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function DoctorSignup() {
+function DoctorSignUp() {
   return <div style = {{ backgroundColor:"#1A374D"}}>
   <Container>
     <Row style = {{marginTop:"1%"}}>
@@ -25,11 +25,11 @@ function DoctorSignup() {
 
   <Row style ={{display:"flex",paddingBottom:"5%",marginRight:"1%"}}>
     <Col style ={{display:"flex",justifyContent:"center",margin:"8% 0%",minWidth:"300px"}}>
-    <Image/>
+    <img src={pic} style={{width:"100%",maxWidth:"500px",height:"auto"}}/>
     </Col>
     <Col style ={{display:"block",justifyContent:"center",marginLeft:"3%"}}>
     <div style ={{color:"#B1D0E0",fontSize:"300%"}}>OnlineClinic welcomes you Doctor</div>
-    <div style ={{color:"#B1D0E0",fontSize:"140%",marginBottom:"3%"}}>Already have an account?<Link to="/SignIn" style = {{textDecoration:"none",color:"#FFF89A"}}> Sign In.</Link></div>
+    <div style ={{color:"#B1D0E0",fontSize:"140%",marginBottom:"3%"}}>Already have an account?<Link to="/DoctorSignIn" style = {{textDecoration:"none",color:"#FFF89A"}}> Sign In.</Link></div>
     <form style ={{justifyContent:"center"}}>
     <label style ={{display:"block",fontSize:"160%",color:"white",marginBottom:"2%"}}>Name </label>
     <input type="text" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"2%",height:"50px",borderRadius:"22px"}}/>

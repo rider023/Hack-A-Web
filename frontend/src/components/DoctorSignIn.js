@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../images/logo.png';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import Image from './Image';
+import pic from '../images/img.png'
 import { Link } from 'react-router-dom';
 import {
   faGoogle,
@@ -59,7 +59,7 @@ function DoctorSignIn() {
           >
             Don't have an account?
             <Link
-              to='/SignUp'
+              to='/DoctorSignUp'
               style={{ textDecoration: 'none', color: '#FFF89A' }}
             >
               {' '}
@@ -172,7 +172,7 @@ function DoctorSignIn() {
         <Col
           style={{ display: 'flex', justifyContent: 'center', margin: '8% 0%' }}
         >
-          <Image />
+         <img src={pic} style={{width:"100%",maxWidth:"500px",height:"auto"}}/>
         </Col>
       </Row>
     </div>

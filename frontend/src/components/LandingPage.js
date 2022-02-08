@@ -48,7 +48,7 @@ function LandingPage() {
               
               { isActive && (
              <div className="dropDown" style={{color:"#fff",fontWeight:"400",fontSize:"160%"}}>
-                 <Link to="/Signup" style={{ textDecoration: "none" }}> 
+                 <Link to="/DoctorSignUp" style={{ textDecoration: "none" }}> 
               <h3 style={{color:"#fff",fontWeight:"400",fontSize:"100%",position:"absolute",top:"12%"}}>As Doctor</h3>
               </Link>
               <Link to="/Signup" style={{ textDecoration: "none" }}> 
