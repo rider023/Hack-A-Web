@@ -7,7 +7,7 @@ import { faBell,faCalendar,faHouseUser,faRobot,faRupeeSign,faUserNurse,faUser,fa
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Profile() {
-  return <div>
+  return <Container>
   <Container style={{marginBottom:"3%"}}>
   <Row style = {{marginTop:"1%"}}>
     <Col style = {{display:"flex",justifyContent:"left"}}>
@@ -89,7 +89,7 @@ function Profile() {
     </Col>
   </Row>
 </Container>
-</div>;
+</Container>;
 }
 
 export default Profile;

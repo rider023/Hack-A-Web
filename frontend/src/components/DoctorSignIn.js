@@ -118,7 +118,7 @@ function DoctorSignIn() {
             >
               Forgot Password?
             </label>
-            <Link to='/Dashboard' style={{ textDecoration: 'none' }}>
+            <Link to='/DoctorDashboard' style={{ textDecoration: 'none' }}>
               <Button
                 style={{
                   marginTop: '6%',

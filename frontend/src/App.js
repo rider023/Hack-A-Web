@@ -14,6 +14,13 @@ import Doctors from './components/Doctors';
 import DoctorProfile from './components/DoctorProfile';
 import DoctorSignIn from './components/DoctorSignIn'
 import DoctorSignUp from './components/DoctorSignUp'
+import Categories from "./components/Categories";
+import DoctorDashboard from "./components/DoctorDashboard";
+import Patients from "./components/Patients";
+import DoctorAppointments from "./components/DoctorAppointments";
+import DoctorReports from "./components/DoctorReports";
+import NewReport from "./components/NewReport";
+import BookAppointment from "./components/BookAppointment";
 
 function App() {
   return (
@@ -34,7 +41,13 @@ function App() {
         <Route path="/DoctorProfile" exact element = {<DoctorProfile/>}/>
         <Route path="/DoctorSignIn" exact element = {<DoctorSignIn/>}/>
         <Route path="/DoctorSignUp" exact element = {<DoctorSignUp/>}/>
-
+        <Route path="/Categories" exact element = {<Categories/>}/>
+        <Route path="/DoctorDashboard" exact element = {<DoctorDashboard/>}/>
+        <Route path="/Patients" exact element = {<Patients/>}/>
+        <Route path="/DoctorAppointments" exact element = {<DoctorAppointments/>}/>
+        <Route path="/DoctorReports" exact element = {<DoctorReports/>}/>
+        <Route path="/NewReport" exact element = {<NewReport/>}/>
+        <Route path="/BookAppointment" exact element = {<BookAppointment/>}/>
       </Routes>
       </BrowserRouter>
     </div>

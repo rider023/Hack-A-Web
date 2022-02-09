@@ -98,7 +98,7 @@ function ConsultDoctor() {
                 {/* Top Section */}
 
               <Row
-                style={{ display: "flex" ,marginBottom:"0%", marginTop: "3%",justifyContent:"center" }}
+                style={{ minWidth:"300px",display: "flex" ,marginBottom:"0%", marginTop: "3%",justifyContent:"center" }}
               >
                 <Row style={boxStyle}>
                 <Col style={{backgroundColor: "#B1D0E0",borderRadius:"50%",}}>
@@ -135,7 +135,7 @@ function ConsultDoctor() {
                   marginLeft: "1%",paddingTop:"6%",marginBottom:"6%"}}>Categories</h3>
                     </Col>
                     <Col style={{textAlign:"right",marginTop:"5%"}}>
-                      <Link to="/ConsultDoctor/Doctors" style={{textDecoration:"none"}}>
+                      <Link to="/Categories" style={{textDecoration:"none"}}>
                     <h6 style={{color:"#B1D0E0"}} >More</h6>
                     </Link>
                     </Col>
