@@ -27,29 +27,30 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Routes>
-        <Route path= "/" exact element = {<LandingPage/>}/>
-        <Route path= "/Discover" exact element = {<Discover/>}/>
-        <Route path= "/Signup" exact element = {<Signup/>}/>
-        <Route path ="/SignIn" exact element = {<SignIn/>}/>
-        <Route path ="/Dashboard" exact element = {<Dashboard/>}/>
-        <Route path ="/Profile" exact element = {<Profile/>}/>
-        <Route path ="/Appointments" exact element = {<Appointments/>}/>
-        <Route path ="/Payments" exact element = {<Payments/>}/>
-        <Route path ="/ConsultDoctor" exact element = {<ConsultDoctor/>}/>
-        <Route path ="/DoctorAI" exact element = {<DoctorAI/>}/>
-        <Route path ="/ConsultDoctor/Doctors" exact element = {<Doctors/>}/>
-        <Route path="/DoctorProfile" exact element = {<DoctorProfile/>}/>
-        <Route path="/DoctorSignIn" exact element = {<DoctorSignIn/>}/>
-        <Route path="/DoctorSignUp" exact element = {<DoctorSignUp/>}/>
-        <Route path="/Categories" exact element = {<Categories/>}/>
-        <Route path="/DoctorDashboard" exact element = {<DoctorDashboard/>}/>
-        <Route path="/Patients" exact element = {<Patients/>}/>
-        <Route path="/DoctorAppointments" exact element = {<DoctorAppointments/>}/>
-        <Route path="/DoctorReports" exact element = {<DoctorReports/>}/>
-        <Route path="/NewReport" exact element = {<NewReport/>}/>
-        <Route path="/BookAppointment" exact element = {<BookAppointment/>}/>
-      </Routes>
+        <Routes>
+          <Route path= "/" exact element = {<LandingPage/>}/>
+          <Route path= "/Discover" exact element = {<Discover/>}/>
+          <Route path= "/Signup" exact element = {<Signup/>}/>
+          <Route path ="/SignIn" exact element = {<SignIn/>}/>
+          <Route path ="/Dashboard" exact element = {<Dashboard/>}/>
+          <Route path ="/Profile" exact element = {<Profile/>}/>
+          <Route path ="/Appointments" exact element = {<Appointments/>}/>
+          <Route path ="/Payments" exact element = {<Payments/>}/>
+          <Route path ="/ConsultDoctor" exact element = {<ConsultDoctor/>}/>
+          <Route path ="/DoctorAI" exact element = {<DoctorAI/>}/>
+          <Route path ="/ConsultDoctor/Doctors" exact element = {<Doctors/>}/>
+          <Route path="/DoctorProfile" exact element = {<DoctorProfile/>}/>
+          <Route path="/DoctorSignIn" exact element = {<DoctorSignIn/>}/>
+          <Route path="/DoctorSignUp" exact element = {<DoctorSignUp/>}/>
+          <Route path="/Categories" exact element = {<Categories/>}/>
+          <Route path="/DoctorDashboard" exact element = {<DoctorDashboard/>}/>
+          <Route path="/Patients" exact element = {<Patients/>}/>
+          <Route path="/DoctorAppointments" exact element = {<DoctorAppointments/>}/>
+          <Route path="/DoctorReports" exact element = {<DoctorReports/>}/>
+          <Route path="/NewReport" exact element = {<NewReport/>}/>
+          <Route path="/BookAppointment" exact element = {<BookAppointment/>}/>
+          <Route path="/VideoCall" exact element = {<VideoCall/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
   );
