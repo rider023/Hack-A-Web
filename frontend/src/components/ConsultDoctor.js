@@ -142,34 +142,28 @@ function ConsultDoctor() {
                   </Row>
                 
                    <Row style={boxCategoryStyle}>
-                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",}}>
+                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",paddingBottom:"40%"}}>
                
                     <h3 style={{backgroundColor: "#6998AB",color:"#1A374D",fontWeight:"400"}}>Brain Specialist</h3>
                    
                    </Col>
-                   <Col style={{backgroundColor: "#6998AB",paddingTop:"30%",paddingBottom:"0px"}}>
-                     <div style={{backgroundColor:"#406882",width:"160%",height:"70px",borderRadius:"20px"}}></div>
-              </Col>
+                   
                 </Row>
                 <Row style={boxCategoryStyle}>
-                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",}}>
+                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",paddingBottom:"40%"}}>
                
                     <h3 style={{backgroundColor: "#6998AB",color:"#1A374D",fontWeight:"400"}}>Heart Specialist</h3>
                    
                    </Col>
-                   <Col style={{backgroundColor: "#6998AB",paddingTop:"30%",paddingBottom:"0px"}}>
-                     <div style={{backgroundColor:"#406882",width:"160%",height:"70px",borderRadius:"20px"}}></div>
-              </Col>
+                  
                 </Row>
                 <Row style={boxCategoryStyle}>
-                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",}}>
+                <Col style={{backgroundColor: "#6998AB",borderRadius:"50%",paddingBottom:"40%"}}>
                
                     <h3 style={{backgroundColor: "#6998AB",color:"#1A374D",fontWeight:"400"}}>Eye Specialist</h3>
                    
                    </Col>
-                   <Col style={{backgroundColor: "#6998AB",paddingTop:"30%",paddingBottom:"0px"}}>
-                     <div style={{backgroundColor:"#406882",width:"160%",height:"70px",borderRadius:"20px"}}></div>
-              </Col>
+                  
                 </Row>
                 </Row>
 
