@@ -21,6 +21,7 @@ import DoctorAppointments from "./components/DoctorAppointments";
 import DoctorReports from "./components/DoctorReports";
 import NewReport from "./components/NewReport";
 import BookAppointment from "./components/BookAppointment";
+import VideoCall from "./video-call/App"
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
         <Route path="/DoctorReports" exact element = {<DoctorReports/>}/>
         <Route path="/NewReport" exact element = {<NewReport/>}/>
         <Route path="/BookAppointment" exact element = {<BookAppointment/>}/>
+        <Route path="/VideoCall" exact element = {<VideoCall/>}/>
+        
       </Routes>
       </BrowserRouter>
     </div>
