@@ -24,6 +24,9 @@ const userSchema = mongoose.Schema({
   contact: {
     type: String,
   },
+  response_by_doctor:{
+    type:String
+  }
 });
 
 userSchema.virtual('password').set(function (password) {

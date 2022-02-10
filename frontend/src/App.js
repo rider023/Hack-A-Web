@@ -12,7 +12,7 @@ import ConsultDoctor from './components/ConsultDoctor';
 import DoctorAI from './components/DoctorAI';
 import Doctors from './components/Doctors';
 import DoctorProfile from './components/DoctorProfile';
-import DoctorSignIn from './components/DoctorSignIn'
+ import DoctorSignIn from './components/DoctorSignIn'
 import DoctorSignUp from './components/DoctorSignUp'
 import Categories from "./components/Categories";
 import DoctorDashboard from "./components/DoctorDashboard";
@@ -21,6 +21,7 @@ import DoctorAppointments from "./components/DoctorAppointments";
 import DoctorReports from "./components/DoctorReports";
 import NewReport from "./components/NewReport";
 import BookAppointment from "./components/BookAppointment";
+import VideoCall from './video-call/App.js' ; 
 
 function App() {
   return (

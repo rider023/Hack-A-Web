@@ -30,6 +30,9 @@ app.get('/doctor', authenticateToken, getDoctor);
 app.get('/user', authenticateToken, getUser);
 app.get("/doctor/consultants",authenticateToken,getConsultants) ; 
 
+
+
+
 //* Listners
 const port = process.env.PORT || 5001;
 app.listen(port, () => {
