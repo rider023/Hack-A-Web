@@ -1,4 +1,5 @@
-import React from 'react';
+import {React, useState} from 'react';
+import Axios from "axios";
 import logo from "../images/logo.png";
 import {Button, Col, Container, Form, Nav,Row} from 'react-bootstrap';
 import Image from './Image';
@@ -7,6 +8,29 @@ import { faGoogle, faApple, faFacebook } from "@fortawesome/free-brands-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Signup() {
+  const url="http://localhost:5000/user/signup"
+  const [data,setData]=useState({
+    full_name:"",
+    email:"",
+    password:""
+  })
+  function handle(event){
+    const newData={...data}
+    newData[event.target.id]=event.target.value
+    setData(newData)
+    console.log(newData)
+  }
+  function submit(){
+    Axios.post(url,{
+      full_name:data.full_name,
+      email:data.email,
+      password:data.password,
+      confirm_password:data.confirm_password
+    })
+    .then(res => {
+      console.log(res.data)
+    })
+  }
   return <div style = {{ backgroundColor:"#1A374D"}}>
   <Container>
     <Row style = {{marginTop:"1%"}}>
@@ -30,15 +54,18 @@ function Signup() {
     <Col style ={{display:"block",justifyContent:"center",marginLeft:"3%"}}>
     <div style ={{color:"#B1D0E0",fontSize:"300%"}}>Welcome to OnlineClinic</div>
     <div style ={{color:"#B1D0E0",fontSize:"140%",marginBottom:"3%"}}>Already have an account?<Link to="/SignIn" style = {{textDecoration:"none",color:"#FFF89A"}}> Sign In.</Link></div>
-    <form style ={{justifyContent:"center"}}>
+    <form  style ={{justifyContent:"center"}}>
     <label style ={{display:"block",fontSize:"160%",color:"white",marginBottom:"2%"}}>Name </label>
-    <input type="text" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"2%",height:"50px",borderRadius:"22px"}}/>
+    <input onChange={(event) => handle(event)} id="full_name" value={data.full_name} type="text" placeholder="Your Name" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"2%",height:"50px",borderRadius:"22px"}}/>
     <label  style ={{display:"block",fontSize:"160%",color:"white",marginBottom:"2%"}}>Email </label>
-    <input type="email" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"2%",height:"50px",borderRadius:"22px"}}/>
+    <input onChange={(event) => handle(event)} id="email" value={data.email} type="Email" placeholder="email" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"2%",height:"50px",borderRadius:"22px"}}/>
     <label style ={{display:"block",fontSize:"160%",color:"white",marginBottom:"2%"}} >Password </label>
-    <input type="password" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"8%",height:"50px",borderRadius:"22px"}}/>
-    <Button  style={{display:"block",marginBottom:"2%",padding:"1% 28% ",borderRadius:"22px", border:"none",backgroundColor:"#406882",color:"white",textDecoration:"none"}}>
-   <b style ={{backgroundColor:"#406882",fontSize:"150%"}}>Create Account</b>
+    <input onChange={(event) => handle(event)} id="password" value={data.password}  type="password" placeholder="Password" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"8%",height:"50px",borderRadius:"22px"}}/>
+    <label style ={{display:"block",fontSize:"160%",color:"white",marginBottom:"2%"}} >Confirm Password </label>
+    <input onChange={(event) => handle(event)} id="confirm_password" value={data.confirm_password}  type="password" placeholder="Confirm Password" style ={{display:"block",backgroundColor:"white",width:"80%",marginBottom:"8%",height:"50px",borderRadius:"22px"}}/>
+    <Button onClick={submit} style={{display:"block",marginBottom:"2%",padding:"1% 28% ",borderRadius:"22px", border:"none",backgroundColor:"#406882",color:"white",textDecoration:"none"}}>
+  Create Account
+   {/* <b style ={{backgroundColor:"#406882",fontSize:"150%"}}>Create Account</b> */}
   </Button>
     </form>
     <h4 style ={{marginBottom:"3%",marginLeft:"28%",color:"white"}}>or continue with</h4>
