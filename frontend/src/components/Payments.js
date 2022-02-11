@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Payments() {
   return <div>
-  <Container style={{marginBottom:"3%"}}>
+  <Container style={{marginBottom:"2%"}}>
   <Row style = {{marginTop:"1%"}}>
     <Col style = {{display:"flex",justifyContent:"left"}}>
     <div style = {{marginLeft:"5%"}}>
